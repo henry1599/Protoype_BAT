@@ -1,0 +1,63 @@
+jQuery("#simulation")
+  .on("click", ".s-d787e45c-909e-48c1-a69f-27e59568be6e .click", function(event, data) {
+    var jEvent, jFirer, cases;
+    if(jimUtil.isAlternateModeActive()) return;
+    if(data === undefined) { data = event; }
+    jEvent = jimEvent(event);
+    jFirer = jEvent.getEventFirer();
+    if(jFirer.is("#s-Paragraph_8")) {
+      cases = [
+        {
+          "blocks": [
+            {
+              "actions": [
+                {
+                  "action": "jimNavigation",
+                  "parameter": {
+                    "target": "screens/885b6989-4191-4e1a-8d71-782398789459",
+                    "transition": {
+                      "type": "slideleft",
+                      "duration": 700
+                    }
+                  },
+                  "exectype": "serial",
+                  "delay": 0
+                }
+              ]
+            }
+          ],
+          "exectype": "serial",
+          "delay": 0
+        }
+      ];
+      event.data = data;
+      jEvent.launchCases(cases);
+    } else if(jFirer.is("#s-Button_1")) {
+      cases = [
+        {
+          "blocks": [
+            {
+              "actions": [
+                {
+                  "action": "jimNavigation",
+                  "parameter": {
+                    "target": "screens/78827450-0a26-455a-8db3-0d24ae7e2a69",
+                    "transition": {
+                      "type": "slideleft",
+                      "duration": 700
+                    }
+                  },
+                  "exectype": "serial",
+                  "delay": 0
+                }
+              ]
+            }
+          ],
+          "exectype": "serial",
+          "delay": 0
+        }
+      ];
+      event.data = data;
+      jEvent.launchCases(cases);
+    }
+  });
